@@ -4,7 +4,7 @@ import "./index.css"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 import {
-  createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
@@ -13,7 +13,7 @@ import MyForm from "./components/MyForm"
 import Home from "./components/Home"
 import Login from "./components/Login"
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
     <Route
       path="/"
