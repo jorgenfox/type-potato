@@ -1,10 +1,13 @@
-import "./App.css"
+import { Outlet } from "react-router-dom"
+import Header from "./components/Header"
+import { Box } from "@mui/material"
 
 function App() {
   return (
-    <>
-      <h1>Header</h1>
-    </>
+    <Box>
+      <Header />
+      <Outlet />
+    </Box>
   )
 }
 

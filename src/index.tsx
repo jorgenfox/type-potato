@@ -9,7 +9,9 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom"
-import MyForm from "./components/Login"
+import MyForm from "./components/MyForm"
+import Home from "./components/Home"
+import Login from "./components/Login"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,16 +20,16 @@ const router = createBrowserRouter(
       element={<App />}
     >
       <Route
-        path="/form"
-        element={<h1>MyForm</h1>}
+        index
+        element={<Home />}
       />
       <Route
-        path="extra"
-        element={<h1>Extra</h1>}
+        path="login"
+        element={<Login />}
       />
       <Route
-        path="contact"
-        element={<h1>Contact</h1>}
+        path="form"
+        element={<MyForm />}
       />
     </Route>,
   ),
@@ -41,7 +43,4 @@ root.render(
   </React.StrictMode>,
 )
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals()
